@@ -22,8 +22,10 @@
 
           for (var i = 1; i < lines.length; i++) {
             var parts = lines[i].split(',');
-            var dateParts = parts[0].split('/');
-            var date = new Date(dateParts[2], dateParts[0] - 1, dateParts[1]);
+           // Inside the for loop where you parse the date
+            var dateParts = parts[0].split('/'); // Split the date into parts
+            var date = new Date(dateParts[2], dateParts[0] - 1, dateParts[1]); // Create Date object (year, month, day)
+
 
             var row = [date];
             for (var j = 1; j <= 10; j++) {
